@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Components/Home';
 import './App.css';
+import './Components/Header.css'
 import Header from './Components/Header';
 import Category from './Components/Category';
 import Recipee from './Components/Recipee';
