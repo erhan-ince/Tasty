@@ -6,6 +6,7 @@ import Category from './Components/Category';
 function App(props) {
      return (
           <Router>
+               <ul><li>hallo!</li></ul>
                {props.children}
                <Switch>
                     <Route path='/' exact>
