@@ -55,6 +55,66 @@ h1 {
      text-align: center;
 }
 #category img {
+<<<<<<< HEAD
+  width: 100%;
+  
+}
+.CategoryItem{
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #333;
+  /* height: 420px; */
+  overflow: hidden;
+}
+.Ingredients{
+  width: 25%;
+  border: 1px solid #333;
+  padding: 10px;
+}
+.Ingredients p{
+  font-size: 0.8rem;
+  text-align: center;
+}
+.Ingredients h6{
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 2% 0 7%;
+}
+.counter{
+  display: flex;
+  margin-bottom: 20px;
+}
+.counter button{
+  width: 25px;
+}
+.counter button:nth-of-type(1){
+  margin-left: 30%;
+}
+.counter h5{
+  text-align: center;
+  width: 30px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 12px 5px;
+  margin: 0;
+}
+.IngredientsItem{
+  display: flex;
+  width: 100%;
+}
+.IngredientsItem img{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.IngredientsItem p{
+  font-size: 0.8rem;
+}
+.IngredientsItem p:nth-of-type(1){
+  margin-right: 6px;
+=======
      width: 100%;
 }
 .CategoryItem {
@@ -129,4 +189,5 @@ span {
 }
 .IngredientsItem p:nth-of-type(1) {
      margin-right: 6px;
+>>>>>>> 5b59ccf45110684db2f2f77f2932c2462ca0e364
 }
