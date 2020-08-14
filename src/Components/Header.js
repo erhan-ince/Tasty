@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Home from './Home';
-import './Header.css';
 import {
    
     Link
