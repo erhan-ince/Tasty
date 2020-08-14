@@ -13,7 +13,7 @@ function App(props) {
                          <Home />
                     </Route>
                     <Route path='/categories/:type' component={Category} />
-                    <Route path='/recipee/:id' component={TestRecipee}/>
+                    <Route path='/recipee/:id' component={TestRecipee} />
                </Switch>
           </Router>
      );
