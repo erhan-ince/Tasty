@@ -55,7 +55,6 @@ h1 {
      text-align: center;
 }
 #category img {
-<<<<<<< HEAD
   width: 100%;
   
 }
@@ -114,7 +113,6 @@ h1 {
 }
 .IngredientsItem p:nth-of-type(1){
   margin-right: 6px;
-=======
      width: 100%;
 }
 .CategoryItem {
@@ -189,5 +187,4 @@ span {
 }
 .IngredientsItem p:nth-of-type(1) {
      margin-right: 6px;
->>>>>>> 5b59ccf45110684db2f2f77f2932c2462ca0e364
 }
