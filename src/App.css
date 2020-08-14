@@ -22,9 +22,6 @@
   box-shadow: 2px 2px 6px 2px #000;
   transform: scale(1.05);
 }
-.type:hover>h1{
-  
-}
 .type img{
   width: 100%;
   border-top-right-radius: 40px;
