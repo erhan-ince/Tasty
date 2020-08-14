@@ -4,12 +4,8 @@ import Home from './Components/Home';
 import './App.css';
 import Header from './Components/Header';
 import Category from './Components/Category';
-import Recipee from './Components/Recipee';
+import TestRecipee from './Components/TestRecipee';
 import Footer from './Components/Footer';
-import bild1 from './img/bild1.png';
-
-
-
 function App(props) {
      return (
           
@@ -32,7 +28,7 @@ function App(props) {
                          <Home />
                     </Route>
                     <Route path='/categories/:type' component={Category} />
-                    <Route path='/recipee/:id' component={Recipee}/>
+                    <Route path='/recipee/:id' component={TestRecipee}/>
                </Switch>
                <Footer />
           </Router>
