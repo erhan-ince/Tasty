@@ -48,11 +48,11 @@ h1{
 }
 
 #category{
+  padding: 5vh 5%;
   display: grid;
   grid-template-columns:  repeat(3,1fr);
   gap: 20px;
   text-align: center;
-  padding: 0 20px;
   
 }
 #category img {
