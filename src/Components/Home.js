@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import data from './typeData'
-import Category from './Category';
+import CategoryMain from './CategoryMain';
 
 class Home extends Component {
      state = {
@@ -21,7 +21,7 @@ class Home extends Component {
      render() {
           return <div className='category'>
                {this.state.data.map((elt, i) =>
-                    <Category
+                    <CategoryMain
                          key={i}
                          type={elt.type}
                          url={elt.url}

@@ -1,19 +1,32 @@
-import React from 'react';
-import {
-    Link
-} from "react-router-dom";
+import React, { Component } from 'react';
+import CategoryItem from './CategoryItem';
 
-const Category = (props) => {
-    return (  
-        <div>
-            <Link to={`/categories/${props.type}`}>
-                <div className="type">
-                    <img src={props.url} alt="" />
-                    <h1>{props.title}</h1>
-                </div>
-            </Link>
-        </div>
-    );
+class Category extends Component {
+    state = {
+        data: []
+    }
+    componentDidMount() {
+        let type = this.props.match.params.type
+        fetch(`https://api.spoonacular.com/recipes/complexSearch?type=${type}&apiKey=5c5fa53f94eb43528aef822933bcc292`)
+            .then(response => response.json())
+            .then(json => {
+                this.setState({ data: json.results });
+            })
+    }
+    render() {
+        return (
+            <div id="category">
+                {this.state.data.map(elt => 
+                    <CategoryItem
+                        key={elt.id}
+                        id={elt.id}
+                        url={elt.image}
+                        title={elt.title}
+                    />
+                    )}
+            </div>
+        );
+    }
 }
 
 export default Category;
