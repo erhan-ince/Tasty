@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from './typeData'
 import CategoryMain from './CategoryMain';
+import Header from './Header';
 
 class Home extends Component {
      state = {
