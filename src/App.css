@@ -68,3 +68,43 @@ h1{
   /* height: 420px; */
   overflow: hidden;
 }
+
+
+/* _________________ Details ________________ */
+/* _________________ Details ________________ */
+/* _________________ Details ________________ */
+.Details{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid gray;
+  text-shadow: 1px 1px 30px tomato;
+  border-radius: 10px;
+  /* width: 600px; */
+  /* background-color: rgb(196, 181, 181); */
+}
+.Details>img{
+  border-radius: 10px;
+  width: 100%;
+}
+h3,p{
+  color: tomato;
+  line-height: 0;
+  
+}
+h4,h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  padding: 0 50px;
+  
+}
+.main{
+  display: flex;
+  justify-items: center;
+    
+}
+
+
