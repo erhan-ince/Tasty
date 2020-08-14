@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './Components/Home';
 import './App.css';
 import Category from './Components/Category';
-import Recipee from './Components/Recipee';
-import Details from './Components/Details';
+import TestRecipee from './Components/TestRecipee';
 function App(props) {
      return (
           <Router>
@@ -14,10 +13,7 @@ function App(props) {
                          <Home />
                     </Route>
                     <Route path='/categories/:type' component={Category} />
-                    <Route path='/recipee/:id' component={Recipee}/>
-                    <Route path="/details">
-                        <Details />
-                    </Route>
+                    <Route path='/recipee/:id' component={TestRecipee}/>
                </Switch>
           </Router>
      );
