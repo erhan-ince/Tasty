@@ -4,6 +4,7 @@ import IngredientsHeader from './IngredientsHeader';
 import IngredientsItem from './IngredientsItem';
 import PreparationHeader from './PreparationHeader';
 import StepItem from './StepItem'
+import SearchBarAll from './SearchBarAll';
 class Recipee extends Component {
      state = {
           data: [],
@@ -16,7 +17,7 @@ class Recipee extends Component {
      }
      componentDidMount() {
           fetch(
-               `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=84fe766ead804aee905fa97fc4f9ead9`
+               `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=5c5fa53f94eb43528aef822933bcc292`
           )
                .then((response) => response.json())
                .then((json) => {
@@ -77,6 +78,7 @@ class Recipee extends Component {
      render() {
           return (
                <article id='recipee'>
+                    <SearchBarAll />
                     <Info
                          title={this.state.data.title}
                          aggregateLikes={this.state.data.aggregateLikes}
