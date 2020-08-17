@@ -1,10 +1,13 @@
 import React from 'react';
-
+import like from './like.svg';
 const Info = (props) => {
     return (  
         <div className="Details">
                 <h3>{props.title}</h3>
-                <p>Like {props.aggregateLikes}</p>
+                <div className="like">
+                    <img src={like} alt=""/>
+                    <p>{props.aggregateLikes}</p>
+                </div>
                 <img src={props.image} alt="" />
                 <div className="main">
                     <div className="">

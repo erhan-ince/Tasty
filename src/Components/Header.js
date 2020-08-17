@@ -18,6 +18,12 @@ class Header extends Component {
                                              />
                                         </Link>
                                    </li>
+                                   <li>
+                                        <Link to='/random'>Random Recipee</Link>
+                                   </li>
+                                   <li>
+                                        <Link to='/fridge'>Fridge</Link>
+                                   </li>
                               </ul>
                          </nav>
                     </header>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CategoryItem from './CategoryItem';
+import SearchBarAll from './SearchBarAll';
 
 class Category extends Component {
      state = {
@@ -8,7 +9,7 @@ class Category extends Component {
      componentDidMount() {
           let type = this.props.match.params.type;
           fetch(
-               `https://api.spoonacular.com/recipes/complexSearch?type=${type}&apiKey=8e50195cba6648a98e54903b9d884d84`
+               `https://api.spoonacular.com/recipes/complexSearch?type=${type}&apiKey=5c5fa53f94eb43528aef822933bcc292`
           )
                .then((response) => response.json())
                .then((json) => {
@@ -17,15 +18,18 @@ class Category extends Component {
      }
      render() {
           return (
-               <div id='category'>
-                    {this.state.data.map((elt) => (
-                         <CategoryItem
-                              key={elt.id}
-                              id={elt.id}
-                              url={elt.image}
-                              title={elt.title}
-                         />
-                    ))}
+               <div>
+                    <SearchBarAll />
+                    <div id='category'>
+                         {this.state.data.map((elt) => (
+                              <CategoryItem
+                                   key={elt.id}
+                                   id={elt.id}
+                                   url={elt.image}
+                                   title={elt.title}
+                              />
+                         ))}
+                    </div>
                </div>
           );
      }

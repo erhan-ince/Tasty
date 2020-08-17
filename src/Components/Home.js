@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from './typeData';
 import CategoryMain from './CategoryMain';
+import SearchBarAll from './SearchBarAll';
 
 class Home extends Component {
      state = {
@@ -11,15 +12,18 @@ class Home extends Component {
      }
      render() {
           return (
-               <div className='category'>
-                    {this.state.data.map((elt, i) => (
-                         <CategoryMain
-                              key={i}
-                              type={elt.type}
-                              url={elt.url}
-                              title={elt.title}
-                         />
-                    ))}
+               <div>
+                    <SearchBarAll />
+                    <div className='category'>
+                         {this.state.data.map((elt, i) => (
+                              <CategoryMain
+                                   key={i}
+                                   type={elt.type}
+                                   url={elt.url}
+                                   title={elt.title}
+                              />
+                         ))}
+                    </div>
                </div>
           );
      }
