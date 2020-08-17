@@ -1,8 +1,10 @@
 import React from 'react';
+import './StepItem.css';
+
 const StepItem = (props) => {
      return (
-          <div>
-               <h6>{props.stepNumber}</h6>
+          <div className='Steps'>
+               <h6 className='BorderNumber'>{props.stepNumber}</h6>
                <p>{props.step}</p>
           </div>
      );

@@ -3,7 +3,8 @@ import Info from './Info';
 import IngredientsHeader from './IngredientsHeader';
 import IngredientsItem from './IngredientsItem';
 import PreparationHeader from './PreparationHeader';
-import StepItem from './StepItem'
+import StepItem from './StepItem';
+import SearchBarAll from './SearchBarAll';
 class Recipee extends Component {
      state = {
           data: [],
@@ -12,8 +13,8 @@ class Recipee extends Component {
           amountArr: [],
           perAmountArr: [],
           unitArr: [],
-          stepsArr: []
-     }
+          stepsArr: [],
+     };
      componentDidMount() {
           fetch(
                `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=5c5fa53f94eb43528aef822933bcc292`
@@ -41,7 +42,9 @@ class Recipee extends Component {
      handlePerAmount = () => {
           let newArr = [];
           for (let j = 0; j < this.state.amountArr.length; j++) {
-               let perAmount = (this.state.amountArr[j] / this.state.servings).toFixed(2);
+               let perAmount = (
+                    this.state.amountArr[j] / this.state.servings
+               ).toFixed(2);
                newArr.push(perAmount);
           }
           this.setState({ perAmountArr: newArr }, this.handleUnits);
@@ -77,6 +80,7 @@ class Recipee extends Component {
      render() {
           return (
                <article id='recipee'>
+                    <SearchBarAll />
                     <Info
                          title={this.state.data.title}
                          aggregateLikes={this.state.data.aggregateLikes}
@@ -86,7 +90,7 @@ class Recipee extends Component {
                          healthScore={this.state.data.healthScore}
                          pricePerServing={this.state.data.pricePerServing}
                     />
-                    <div className="bottom">
+                    <div className='bottom'>
                          <div className='Ingredients'>
                               <IngredientsHeader
                                    handleMinus={this.handleMinus}
@@ -97,24 +101,28 @@ class Recipee extends Component {
                                    <IngredientsItem
                                         key={i}
                                         ingredientImg={elt.image}
-                                        ingredientAmount={this.state.amountArr[i]}
+                                        ingredientAmount={
+                                             this.state.amountArr[i]
+                                        }
                                         unit={this.state.unitArr[i]}
-                                        ingredient={this.state.IngredientData[i].name}
+                                        ingredient={
+                                             this.state.IngredientData[i].name
+                                        }
                                    />
                               ))}
                          </div>
-                         <div className="Preparation">
+                         <div className='Preparation'>
                               <PreparationHeader
                                    totalTime={this.state.data.readyInMinutes}
                                    prepTime={this.state.data.preparationMinutes}
                               />
-                              {this.state.stepsArr.map(elt => 
+                              {this.state.stepsArr.map((elt) => (
                                    <StepItem
                                         key={elt.number}
                                         stepNumber={elt.number}
                                         step={elt.step}
                                    />
-                                   )}
+                              ))}
                          </div>
                     </div>
                </article>
