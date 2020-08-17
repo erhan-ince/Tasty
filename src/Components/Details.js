@@ -8,7 +8,7 @@ class Details extends Component {
     }
     componentDidMount() {
         // let type = this.props.match.params
-        fetch('https://api.spoonacular.com/recipes/677670/information?apiKey=adc6b8b2a9dd4856a79419fdcec21e21')
+        fetch('https://api.spoonacular.com/recipes/677670/information?apiKey=5c5fa53f94eb43528aef822933bcc292')
             .then(response => response.json())
             .then(json => {
                 this.setState({ data: json });
@@ -22,7 +22,7 @@ class Details extends Component {
                 <p>Like {this.state.data.aggregateLikes}</p>
                 <img src={this.state.data.image} alt="" />
                 <div className="main">
-                    <div className="">
+                    <div>
                         <h4>Duration</h4>
                         <h5>{this.state.data.readyInMinutes}</h5>
                     </div>

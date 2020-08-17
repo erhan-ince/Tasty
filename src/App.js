@@ -7,7 +7,7 @@ import Header from './Components/Header';
 import Category from './Components/Category';
 import Recipee from './Components/Recipee';
 import Footer from './Components/Footer';
-
+import './Components/Details.css';
 function App(props) {
      return (
           <Router>
