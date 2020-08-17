@@ -273,7 +273,7 @@ h6.color{
 .searchbar {
      display: flex;
      justify-content: center;
-     background: #545954;
+     background: #fff;
      padding-bottom: 5px;
 }
 .searchbar input {
