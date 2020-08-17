@@ -8,7 +8,7 @@ class Details extends Component {
     }
     componentDidMount() {
         // let type = this.props.match.params
-        fetch('https://api.spoonacular.com/recipes/677670/information?apiKey=adc6b8b2a9dd4856a79419fdcec21e21')
+        fetch('https://api.spoonacular.com/recipes/677670/information?apiKey=5c5fa53f94eb43528aef822933bcc292')
             .then(response => response.json())
             .then(json => {
                 this.setState({ data: json });

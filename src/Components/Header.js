@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import bild1 from './img/bild1.png';
 import {
    
     Link
@@ -15,7 +16,8 @@ class Header extends Component {
 
                 <nav>
                     <ul>
-                        <li><Link to="/"><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS64FOqga63Z_ONEhv_Alc7hvUcDbEHkcg_nA&usqp=CAU" width="100px"alt="" /></Link></li>
+                        <li><Link to="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS64FOqga63Z_ONEhv_Alc7hvUcDbEHkcg_nA&usqp=CAU" width="100px" alt="" /></Link></li>
+                        
             
        
                

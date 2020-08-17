@@ -16,7 +16,7 @@ class Recipee extends Component {
      }
      componentDidMount() {
           fetch(
-               `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=84fe766ead804aee905fa97fc4f9ead9`
+               `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=5c5fa53f94eb43528aef822933bcc292`
           )
                .then((response) => response.json())
                .then((json) => {

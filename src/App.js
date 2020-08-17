@@ -7,6 +7,7 @@ import Header from './Components/Header';
 import Category from './Components/Category';
 import Recipee from './Components/Recipee';
 import Footer from './Components/Footer';
+// import bild1 from './Components/img/bild1.png';
 
 function App(props) {
      return (

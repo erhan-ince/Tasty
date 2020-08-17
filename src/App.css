@@ -37,14 +37,28 @@ a {
      text-decoration: none;
 }
 h1 {
-     font-size: 1.8rem;
+     font-size: 2rem;
      position: absolute;
      top: 40%;
      left: 50%;
      transform: translateX(-50%);
-     text-shadow: 3px 3px 3px #000;
-     -webkit-text-stroke: #000 1px;
+     text-shadow: 1px 1px 1px #000;
+     /* -webkit-text-stroke: #000 1px; */
      color: #effaf4;
+     font-family: 'Lobster', cursive;
+     border: 1px solid white;
+     padding: 10px 10px;
+     border-radius: 3px;
+}
+h2{
+     font-family: 'Lobster', cursive;
+     color:#5bb3a0;
+     
+}
+h3{
+     font-family: 'Lobster', cursive;
+     color: #5bb3a0;
+     font-size: 2rem;
 }
 
 #category {
@@ -53,6 +67,7 @@ h1 {
      grid-template-columns: repeat(3, 1fr);
      gap: 20px;
      text-align: center;
+     background: #effaf4;
 }
 #category img {
   width: 100%;
@@ -63,7 +78,7 @@ h1 {
   border-bottom-left-radius: 40px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  border: 1px solid #333;
+  /* border: 1px solid #333; */
   /* height: 420px; */
   overflow: hidden;
 }
@@ -120,13 +135,14 @@ h1 {
      border-bottom-left-radius: 40px;
      border-top-left-radius: 5px;
      border-bottom-right-radius: 5px;
-     border: 1px solid #333;
+     /* border: 1px solid #333; */
      /* height: 420px; */
      overflow: hidden;
 }
 h6 {
      font-size: 2, 5em;
      padding-left: 20px;
+     
 }
 span {
      color: red;
@@ -187,4 +203,10 @@ span {
 }
 .IngredientsItem p:nth-of-type(1) {
      margin-right: 6px;
+}
+h6.color{
+     color:#5bb3a0;
+}
+.Details{
+     background: #effaf4;
 }
