@@ -1,9 +1,11 @@
 .Details {
-   border: 5px solid rgb(100, 175, 175);
+   /* border: 5px solid rgb(100, 175, 175); */
    /* box-shadow: 5px 5px 30px tomato; */
     border-top-style: none;
     border-left-style: none; 
     border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -14,7 +16,6 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
-    
 }
 .main h4,h5{
     padding: 0 25px;

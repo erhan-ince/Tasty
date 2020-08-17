@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import './App.css';
 import './Components/Header.css'
 import './Components/Details.css'
+import './Components/PreparationHeader.css'
 import Header from './Components/Header';
 import Category from './Components/Category';
 import Recipee from './Components/Recipee';

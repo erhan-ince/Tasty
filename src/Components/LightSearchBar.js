@@ -13,7 +13,7 @@ class SearchBarAll extends Component {
     }
     render() {
         return (
-            <form action="" className='searchbar'>
+            <form action="" className='searchbar noBG'>
                 <input type="text" placeholder='What are you in the mood for?' onChange={this.handleChange} />
                 <Link to={`/search/${this.state.search}`}>Search</Link>
             </form>

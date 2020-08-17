@@ -8,7 +8,7 @@ class Search extends Component {
     }
     componentDidMount() {
         fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?query=${this.props.match.params.query}&apiKey=b294483d11db4c388684654c4727b987`
+            `https://api.spoonacular.com/recipes/complexSearch?query=${this.props.match.params.query}&apiKey=f2401b7dfd314af29cd194707465a940`
         )
             .then((response) => response.json())
             .then((json) => {
@@ -20,7 +20,7 @@ class Search extends Component {
     }
     handleSearch = (event) => {
         fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?query=${this.state.search}&apiKey=8b294483d11db4c388684654c4727b987`
+            `https://api.spoonacular.com/recipes/complexSearch?query=${this.state.search}&apiKey=f2401b7dfd314af29cd194707465a940`
         )
             .then((response) => response.json())
             .then((json) => {
@@ -32,8 +32,8 @@ class Search extends Component {
         return (
             <div className="search">
                 <form action="" className='searchbar'>
-                    <input type="text" placeholder='Search' onChange={this.handleChange} />
-                    <button onClick={this.handleSearch}>Submit</button>
+                    <input type="text" placeholder='What are you in the mood for?' onChange={this.handleChange} />
+                    <button onClick={this.handleSearch}>Search</button>
                 </form>
                 <div id='category'>
                     {this.state.data.map((elt) => (
