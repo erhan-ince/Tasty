@@ -37,14 +37,28 @@ a {
      text-decoration: none;
 }
 h1 {
-     font-size: 1.8rem;
+     font-size: 2rem;
      position: absolute;
      top: 40%;
      left: 50%;
      transform: translateX(-50%);
-     text-shadow: 3px 3px 3px #000;
-     -webkit-text-stroke: #000 1px;
+     text-shadow: 1px 1px 1px #000;
+     /* -webkit-text-stroke: #000 1px; */
      color: #effaf4;
+     font-family: 'Lobster', cursive;
+     border: 1px solid white;
+     padding: 10px 10px;
+     border-radius: 3px;
+}
+h2{
+     font-family: 'Lobster', cursive;
+     color:#5bb3a0;
+     
+}
+h3{
+     font-family: 'Lobster', cursive;
+     color: #5bb3a0;
+     font-size: 2rem;
 }
 
 #category {
@@ -53,8 +67,67 @@ h1 {
      grid-template-columns: repeat(3, 1fr);
      gap: 20px;
      text-align: center;
+     background: #effaf4;
 }
 #category img {
+  width: 100%;
+  
+}
+.CategoryItem{
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* border: 1px solid #333; */
+  /* height: 420px; */
+  overflow: hidden;
+}
+.Ingredients{
+  width: 25%;
+  border: 1px solid #333;
+  padding: 10px;
+}
+.Ingredients p{
+  font-size: 0.8rem;
+  text-align: center;
+}
+.Ingredients h6{
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 2% 0 7%;
+}
+.counter{
+  display: flex;
+  margin-bottom: 20px;
+}
+.counter button{
+  width: 25px;
+}
+.counter button:nth-of-type(1){
+  margin-left: 30%;
+}
+.counter h5{
+  text-align: center;
+  width: 30px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 12px 5px;
+  margin: 0;
+}
+.IngredientsItem{
+  display: flex;
+  width: 100%;
+}
+.IngredientsItem img{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.IngredientsItem p{
+  font-size: 0.8rem;
+}
+.IngredientsItem p:nth-of-type(1){
+  margin-right: 6px;
      width: 100%;
 }
 .CategoryItem {
@@ -122,13 +195,14 @@ h1 {
      border-bottom-left-radius: 40px;
      border-top-left-radius: 5px;
      border-bottom-right-radius: 5px;
-     border: 1px solid #333;
+     /* border: 1px solid #333; */
      /* height: 420px; */
      overflow: hidden;
 }
 h6 {
      font-size: 2, 5em;
      padding-left: 20px;
+     
 }
 span {
      color: red;
@@ -190,8 +264,11 @@ span {
 .IngredientsItem p:nth-of-type(1) {
      margin-right: 6px;
 }
-.hidden {
-     display: none;
+h6.color{
+     color:#5bb3a0;
+}
+.Details{
+     background: #effaf4;
 }
 .searchbar {
      display: flex;

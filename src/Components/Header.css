@@ -12,7 +12,8 @@ html{
 }
 header{
     margin: 0;
-    background-color: #545954;
+    /* background-color: #cce6db; */
+   
 }
 header img{
     margin: 10px 0 10px 50px;
