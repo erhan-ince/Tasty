@@ -12,9 +12,12 @@ class Home extends Component {
      }
      render() {
           return (
-               <div>
-                    <SearchBarAll />
+               <div className='home'>
                     <div className='category'>
+                         <div className="anass">
+                              <h2>One thousand flavors in one place!</h2>
+                              <SearchBarAll className='bgColor'/>
+                         </div>
                          {this.state.data.map((elt, i) => (
                               <CategoryMain
                                    key={i}

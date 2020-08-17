@@ -28,7 +28,7 @@ class Fridge extends Component {
         this.setState({ ingredient5: e.target.value });
     }
     handleSelect = (event) => {
-        let newUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${this.state.ingredient1},+${this.state.ingredient2},+${this.state.ingredient3}&ranking=1&apiKey=8e50195cba6648a98e54903b9d884d84`
+        let newUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${this.state.ingredient1},+${this.state.ingredient2},+${this.state.ingredient3}&ranking=1&apiKey=f2401b7dfd314af29cd194707465a940`
         fetch(newUrl)
             .then(response => response.json())
             .then(json => {
@@ -40,8 +40,8 @@ class Fridge extends Component {
         return (
             <div className="Fridge">
                 <SearchBarAll />
-                <h3>Select Ingredients</h3>
-                <form action="">
+                <h3 className='middleHeader'>Select the Ingredients in your fridge</h3>
+                <form action="" className='middle'>
                     <select name="" onChange={this.handleUpdate1}>
                         <option value=""></option>
                         <option value="tomatoes">Tomatoes</option>

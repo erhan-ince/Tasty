@@ -4,7 +4,7 @@ import IngredientsHeader from './IngredientsHeader';
 import IngredientsItem from './IngredientsItem';
 import PreparationHeader from './PreparationHeader';
 import StepItem from './StepItem'
-import SearchBarAll from './SearchBarAll';
+import LightSearchBar from './LightSearchBar';
 class Recipee extends Component {
     state = {
         data: [],
@@ -17,12 +17,11 @@ class Recipee extends Component {
     }
     componentDidMount() {
         fetch(
-            `https://api.spoonacular.com/recipes/random?apiKey=8e50195cba6648a98e54903b9d884d84`
+            `https://api.spoonacular.com/recipes/random?apiKey=f2401b7dfd314af29cd194707465a940`
         )
             .then((response) => response.json())
             .then((json) => {
                 this.setState({ data: json.recipes[0] });
-                console.log(this.state.data)
                 this.setState(
                     {
                         stepsArr: json.recipes[0].analyzedInstructions[0].steps,
@@ -79,45 +78,51 @@ class Recipee extends Component {
     render() {
         return (
             <article id='recipee'>
-                <SearchBarAll />
-                <Info
-                    title={this.state.data.title}
-                    aggregateLikes={this.state.data.aggregateLikes}
-                    image={this.state.data.image}
-                    readyInMinutes={this.state.data.readyInMinutes}
-                    servings={this.state.data.servings}
-                    healthScore={this.state.data.healthScore}
-                    pricePerServing={this.state.data.pricePerServing}
-                />
-                <div className="bottom">
-                    <div className='Ingredients'>
-                        <IngredientsHeader
-                            handleMinus={this.handleMinus}
-                            counter={this.state.servings}
-                            handlePlus={this.handlePlus}
-                        />
-                        {this.state.IngredientData.map((elt, i) => (
-                            <IngredientsItem
-                                key={i}
-                                ingredientImg={elt.image}
-                                ingredientAmount={this.state.amountArr[i]}
-                                unit={this.state.unitArr[i]}
-                                ingredient={this.state.IngredientData[i].name}
+                <LightSearchBar />
+                <div id="recipeeMain">
+                    <Info
+                        title={this.state.data.title}
+                        aggregateLikes={this.state.data.aggregateLikes}
+                        image={this.state.data.image}
+                        readyInMinutes={this.state.data.readyInMinutes}
+                        servings={this.state.data.servings}
+                        healthScore={this.state.data.healthScore}
+                        pricePerServing={this.state.data.pricePerServing}
+                    />
+                    <div className='bottom'>
+                        <div className='Ingredients'>
+                            <IngredientsHeader
+                                handleMinus={this.handleMinus}
+                                counter={this.state.servings}
+                                handlePlus={this.handlePlus}
                             />
-                        ))}
-                    </div>
-                    <div className="Preparation">
-                        <PreparationHeader
-                            totalTime={this.state.data.readyInMinutes}
-                            prepTime={this.state.data.preparationMinutes}
-                        />
-                        {this.state.stepsArr.map(elt =>
-                            <StepItem
-                                key={elt.number}
-                                stepNumber={elt.number}
-                                step={elt.step}
+                            {this.state.IngredientData.map((elt, i) => (
+                                <IngredientsItem
+                                    key={i}
+                                    ingredientImg={elt.image}
+                                    ingredientAmount={
+                                        this.state.amountArr[i]
+                                    }
+                                    unit={this.state.unitArr[i]}
+                                    ingredient={
+                                        this.state.IngredientData[i].name
+                                    }
+                                />
+                            ))}
+                        </div>
+                        <div className='Preparation'>
+                            <PreparationHeader
+                                totalTime={this.state.data.readyInMinutes}
+                                prepTime={this.state.data.preparationMinutes}
                             />
-                        )}
+                            {this.state.stepsArr.map((elt) => (
+                                <StepItem
+                                    key={elt.number}
+                                    stepNumber={elt.number}
+                                    step={elt.step}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </article>

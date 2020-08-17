@@ -9,7 +9,7 @@ class Category extends Component {
      componentDidMount() {
           let type = this.props.match.params.type;
           fetch(
-               `https://api.spoonacular.com/recipes/complexSearch?type=${type}&apiKey=8e50195cba6648a98e54903b9d884d84`
+               `https://api.spoonacular.com/recipes/complexSearch?type=${type}&apiKey=f2401b7dfd314af29cd194707465a940`
           )
                .then((response) => response.json())
                .then((json) => {

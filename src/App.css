@@ -1,5 +1,5 @@
 .category {
-     padding: 10vh 5%;
+     padding: 1vh 5% 10vh;
      row-gap: 40px;
      column-gap: 80px;
      display: grid;
@@ -65,7 +65,8 @@ h3{
      padding: 5vh 5%;
      display: grid;
      grid-template-columns: repeat(3, 1fr);
-     gap: 20px;
+     row-gap: 30px;
+     column-gap: 50px;
      text-align: center;
      background: #effaf4;
 }
@@ -73,122 +74,8 @@ h3{
   width: 100%;
   
 }
-.CategoryItem{
-  border-top-right-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-top-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  /* border: 1px solid #333; */
-  /* height: 420px; */
-  overflow: hidden;
-}
-.Ingredients{
-  width: 25%;
-  border: 1px solid #333;
-  padding: 10px;
-}
-.Ingredients p{
-  font-size: 0.8rem;
-  text-align: center;
-}
-.Ingredients h6{
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 2% 0 7%;
-}
-.counter{
-  display: flex;
-  margin-bottom: 20px;
-}
-.counter button{
-  width: 25px;
-}
-.counter button:nth-of-type(1){
-  margin-left: 30%;
-}
-.counter h5{
-  text-align: center;
-  width: 30px;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-  padding: 12px 5px;
-  margin: 0;
-}
-.IngredientsItem{
-  display: flex;
-  width: 100%;
-}
-.IngredientsItem img{
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-.IngredientsItem p{
-  font-size: 0.8rem;
-}
-.IngredientsItem p:nth-of-type(1){
-  margin-right: 6px;
-     width: 100%;
-}
-.CategoryItem {
-     border-top-right-radius: 40px;
-     border-bottom-left-radius: 40px;
-     border-top-left-radius: 5px;
-     border-bottom-right-radius: 5px;
-     border: 1px solid #333;
-     /* height: 420px; */
-     overflow: hidden;
-}
 #category a:last-of-type {
      display: none;
-}
-.Ingredients {
-     width: 25%;
-     border: 1px solid #333;
-     padding: 10px;
-}
-.Ingredients p {
-     font-size: 0.8rem;
-     text-align: center;
-}
-.Ingredients h6 {
-     text-align: center;
-     font-size: 1.2rem;
-     margin: 2% 0 7%;
-}
-.counter {
-     display: flex;
-     margin-bottom: 20px;
-}
-.counter button {
-     width: 25px;
-}
-.counter button:nth-of-type(1) {
-     margin-left: 30%;
-}
-.counter h5 {
-     text-align: center;
-     width: 30px;
-     border-top: 1px solid #333;
-     border-bottom: 1px solid #333;
-     padding: 12px 5px;
-     margin: 0;
-}
-.IngredientsItem {
-     display: flex;
-     width: 100%;
-}
-.IngredientsItem img {
-     width: 30px;
-     height: 30px;
-     margin-right: 10px;
-}
-.IngredientsItem p {
-     font-size: 0.8rem;
-}
-.IngredientsItem p:nth-of-type(1) {
-     margin-right: 6px;
-     width: 100%;
 }
 .CategoryItem {
      border-top-right-radius: 40px;
@@ -196,8 +83,26 @@ h3{
      border-top-left-radius: 5px;
      border-bottom-right-radius: 5px;
      /* border: 1px solid #333; */
-     /* height: 420px; */
      overflow: hidden;
+     background: #fff;
+}
+.CategoryImg{
+     overflow: hidden;
+     background: #333;
+     height: 38vh;
+}
+.CategoryItem img{
+     opacity: .5;
+     transition: opacity 0.2s, transform 0.4s;
+}
+.CategoryItem img:hover{
+     opacity: 1;
+     transform: scale(1.05);
+}
+.CategoryItem h2{
+     padding-top: 20px;
+     height: 80px;
+     margin: 0;
 }
 h6 {
      font-size: 2, 5em;
@@ -218,9 +123,10 @@ span {
      align-items: center;
 }
 .Ingredients {
-     width: 25%;
-     border: 1px solid #333;
+     width: 60%;
      padding: 10px;
+     margin: 15px;
+     border-right: 2px solid #5bb3a0;
 }
 .Ingredients p {
      font-size: 0.8rem;
@@ -237,6 +143,11 @@ span {
 }
 .counter button {
      width: 25px;
+     background: #5bb3a0;
+     border: none;
+     border-radius: 2px;
+     color: #fff;
+     font-size: 1.5rem;
 }
 .counter button:nth-of-type(1) {
      margin-left: 30%;
@@ -244,8 +155,8 @@ span {
 .counter h5 {
      text-align: center;
      width: 30px;
-     border-top: 1px solid #333;
-     border-bottom: 1px solid #333;
+     border-top: 1px solid #5bb3a0;
+     border-bottom: 1px solid #5bb3a0;
      padding: 12px 5px;
      margin: 0;
 }
@@ -273,45 +184,199 @@ h6.color{
 .searchbar {
      display: flex;
      justify-content: center;
-     background: #fff;
-     padding-bottom: 5px;
+     padding: 5px 0;
+     background: #effaf4;
 }
 .searchbar input {
+     font-size: 1.2rem;
      border-top-right-radius: 10px;
      border-bottom-left-radius: 10px;
      border-top-left-radius: 2px;
      border-bottom-right-radius: 2px;
      border: none;
      padding-left: 5px;
+     border: 1px solid #5bb3a0;
+     width: 30%;
 }
 .searchbar input:focus {
      outline: none;
 }
 ::placeholder {
+     font-size: 1.1rem;
      padding-left: 5px;
+     font-family: 'Lobster', cursive;
 }
 .searchbar a {
-     color: #effaf4;
+     font-size: 1.2rem;
+     font-family: 'Lobster', cursive;
+     color: #fff;
+     background: #5bb3a0;
      margin-left: 5px;
-     border: 1px solid #effaf4;
-     padding: 3px 10px;
+     border: 1px solid #5bb3a0;
+     padding: 8px 20px;
      border-top-right-radius: 10px;
      border-bottom-left-radius: 10px;
      border-top-left-radius: 2px;
      border-bottom-right-radius: 2px;
+     transition: background .4s, color .2s;
+}
+.searchbar a:hover{
+     color: #5bb3a0;
+     background: #effaf4;
 }
 .searchbar button {
-     font-size: 1rem;
-     color: #effaf4;
-     background: none;
+     font-family: 'Lobster', cursive;
+     font-size: 1.2rem;
+     color: #fff;
+     background: #5bb3a0;
      margin-left: 5px;
-     border: 1px solid #effaf4;
-     padding: 3px 10px;
+     border: 1px solid #5bb3a0;
+     padding: 8px 20px;
      border-top-right-radius: 10px;
      border-bottom-left-radius: 10px;
      border-top-left-radius: 2px;
      border-bottom-right-radius: 2px;
+     transition: background .4s, color .2s;
+}
+.searchbar button:hover{
+     color: #5bb3a0;
+     background: #effaf4;
 }
 .searchbar button:focus {
      outline: none;
 }
+.bottom{
+     background: #fff;
+     display: flex;
+     margin: 10px;
+     border-radius: 15px;
+     box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, .5);
+}
+#recipeeMain{
+     background: #effaf4;
+     margin: 1% 10%;
+     padding-bottom: 1px;
+     border-radius: 15px;
+     box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, .5);
+}
+.anass{
+     grid-column: 1/-1;
+}
+.anass h2{
+     text-align: center;
+     font-size: 3rem;
+     margin: 0 0 2vh 0;
+}
+.middle{
+     background: #effaf4;
+     text-align: center;
+     padding-bottom: 10px;
+}
+select{
+     margin-right: 2px;
+     margin-bottom: 5px;
+}
+.middle button{
+     font-family: 'Lobster', cursive;
+     font-size: 1.2rem;
+     color: #fff;
+     background: #5bb3a0;
+     margin-left: 5px;
+     border: 1px solid #5bb3a0;
+     padding: 2px 15px;
+     border-top-right-radius: 10px;
+     border-bottom-left-radius: 10px;
+     border-top-left-radius: 2px;
+     border-bottom-right-radius: 2px;
+     transition: background .4s, color .2s;
+}
+.middle button:hover{
+     color: #5bb3a0;
+     background: #fff;
+}
+.middleHeader{
+     background: #effaf4;
+     text-align: center;
+     padding: 4vh 0 1vh 0;
+     margin: 0;
+}
+.middle button:focus{
+     outline: none;
+}
+select:focus{
+     outline: none;
+}
+.Fridge{
+     background: #effaf4;
+     min-height: 75vh;
+}
+.noBG{
+     background: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+     .category {
+          grid-template-columns: 1fr 1fr;
+     }
+     .type{
+          height: 30vh;
+     }
+     .type img{
+          object-fit: cover;
+          opacity: .6;
+     }
+     ::placeholder{
+          font-size: 1rem;
+     }
+     footer{
+          height: 180px;
+     }
+     #category{
+          grid-template-columns: 1fr 1fr;
+     }
+     .CategoryImg{
+          height: 23vh;
+     }
+     #recipeeMain{
+          margin: 0;
+     }
+     .bottom{
+          display: block;
+     }
+     .Ingredients{
+          width: 95%;
+          border-right: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+     }
+     .IngredientsItem{
+          width: 50%;
+     }
+     .Ingredients p{
+          font-size: 1.1rem;
+     }
+     .IngredientsItem img{
+          width: 50px;
+          height: 50px;
+     }
+     .Ingredients h6{
+          font-size: 1.5rem;
+     }
+     .Preparation{
+          padding: 10px;
+     }
+     .PreparationHeader h6{
+          text-align: center;
+          font-size: 1.5rem;
+     }
+     }
+     @media only screen and (min-width: 320px) and (max-width: 479px) {
+          .home{
+               width: 100%;
+          }
+          .category{
+               width: 100%;
+               grid-template-columns: 1fr;
+          }
+          }
