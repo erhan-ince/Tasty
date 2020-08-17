@@ -1,11 +1,13 @@
 import React from 'react';
+import './PreparationHeader.css';
+
 const PreparationHeader = (props) => {
      return (
-          <div>
-               <h6>Preparation:</h6>
-               <div>
-                    <h6>Total Time:{props.totalTime}</h6>
-                    <p>Preparation:{props.prepTime}</p>
+          <div className='PreparationHeader'>
+               <h6 className='PrepHead'>Preparation:</h6>
+               <div className='Time'>
+                    <p className='BorderRed'>Total Time:{props.totalTime}min</p>
+                    <p>Preparation:{props.prepTime}min</p>
                </div>
           </div>
      );

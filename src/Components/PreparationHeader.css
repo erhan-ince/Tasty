@@ -1,0 +1,18 @@
+.PrepHead {
+     color: orange;
+     font-size: 1.2rem;
+
+     margin-left: -2.5%;
+}
+.PreparationHeader {
+     width: 500px;
+}
+.BorderRed {
+     border-top: 1px solid orange;
+     border-bottom: 1px solid orange;
+     padding-top: 15px;
+     padding-bottom: 15px;
+}
+.Time {
+     text-align: center;
+}
