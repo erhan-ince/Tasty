@@ -55,3 +55,21 @@
 .like img{
     padding-right: 5px;
 }
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .Details img{
+        width: 95%;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .main div{
+        margin: 10% 0%;
+    }
+    .main div:nth-of-type(odd){
+        border-left: none;
+    }
+    .Details h3{
+        padding: 5px;
+    }
+    }

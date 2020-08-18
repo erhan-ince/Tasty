@@ -332,6 +332,29 @@ select:focus{
 .EquipmentItem img{
      width: 50px;
 }
+.refresh {
+     font-family: 'Lobster', cursive;
+     font-size: 1.2rem;
+     color: #fff;
+     background: #5bb3a0;
+     margin-left: 5px;
+     border: 1px solid #5bb3a0;
+     padding: 8px 0px;
+     border-top-right-radius: 10px;
+     border-bottom-left-radius: 10px;
+     border-top-left-radius: 2px;
+     border-bottom-right-radius: 2px;
+     transition: background .4s, color .2s;
+     width: 120px;
+     margin-left: calc(50% - 60px);
+}
+.refresh:hover{
+     color: #5bb3a0;
+     background: #effaf4;
+}
+.refresh:focus {
+     outline: none;
+}
 @media only screen and (min-width: 768px) and (max-width: 979px) {
      .category {
           grid-template-columns: 1fr 1fr;
@@ -394,6 +417,13 @@ select:focus{
           .home{
                width: 95%;
           }
+          .home img{
+               opacity: .8;
+          }
+          .category{
+               width: 95%;
+               grid-template-columns: 1fr;
+          }
           #category{
                width: 100%;
                grid-template-columns: 1fr;
@@ -427,6 +457,7 @@ select:focus{
           }
           #category img{
                width: 100%;
+               opacity: 1;
           }
           .searchbar input{
                width: 50%;
@@ -439,6 +470,28 @@ select:focus{
           }
           .main{
                width: 100%;
-              display: flex;
+               display: flex;
+          }
+          #recipeeMain{
+               margin: 1%;
+          }
+          .bottom{
+               display: block;
+          }
+          .Ingredients{
+               width: 88%;
+               border-right: none;
+          }
+          .Ingredients h6{
+               padding: 0;
+          }
+          .Preparation{
+               padding: 5px;
+          }
+          .Preparation h6{
+               text-align: center;
+          }
+          .refresh{
+               margin-bottom: 5px;
           }
      }

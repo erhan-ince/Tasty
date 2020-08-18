@@ -19,7 +19,7 @@ class Recipee extends Component {
     }
     componentDidMount() {
         fetch(
-            `https://api.spoonacular.com/recipes/random?apiKey=f2401b7dfd314af29cd194707465a940`
+            `https://api.spoonacular.com/recipes/random?apiKey=adc6b8b2a9dd4856a79419fdcec21e21`
         )
             .then((response) => response.json())
             .then((json) => {
@@ -79,17 +79,21 @@ class Recipee extends Component {
     };
     handleEquipment = () => {
         fetch(
-            `https://api.spoonacular.com/recipes/${this.state.data.id}/equipmentWidget.json?apiKey=f2401b7dfd314af29cd194707465a940`
+            `https://api.spoonacular.com/recipes/${this.state.data.id}/equipmentWidget.json?apiKey=adc6b8b2a9dd4856a79419fdcec21e21`
         )
             .then((response) => response.json())
             .then((json) => {
                 this.setState({ equipment: json.equipment });
             });
     }
+    handleRefresh = () => {
+        window.location.reload(false);
+    }
     render() {
         return (
             <article id='recipee'>
                 <LightSearchBar />
+                <button onClick={this.handleRefresh} className='refresh'>Try again!</button>
                 <div id="recipeeMain">
                     <Info
                         title={this.state.data.title}

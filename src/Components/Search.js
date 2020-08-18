@@ -8,7 +8,7 @@ class Search extends Component {
     }
     componentDidMount() {
         fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?query=${this.props.match.params.query}&apiKey=f2401b7dfd314af29cd194707465a940`
+            `https://api.spoonacular.com/recipes/complexSearch?query=${this.props.match.params.query}&apiKey=adc6b8b2a9dd4856a79419fdcec21e21`
         )
             .then((response) => response.json())
             .then((json) => {
@@ -20,7 +20,7 @@ class Search extends Component {
     }
     handleSearch = (event) => {
         fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?query=${this.state.search}&apiKey=f2401b7dfd314af29cd194707465a940`
+            `https://api.spoonacular.com/recipes/complexSearch?query=${this.state.search}&apiKey=adc6b8b2a9dd4856a79419fdcec21e21`
         )
             .then((response) => response.json())
             .then((json) => {
