@@ -373,10 +373,16 @@ select:focus{
      }
      @media only screen and (min-width: 320px) and (max-width: 479px) {
           .home{
-               width: 100%;
+               width: 95%;
           }
           .category{
-               width: 100%;
+               width: 95%;
                grid-template-columns: 1fr;
+          }
+          .searchbar input{
+               width: 50%;
+          }
+          ::placeholder{
+               font-size: .75rem;
           }
           }
