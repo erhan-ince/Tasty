@@ -5,6 +5,7 @@ import IngredientsItem from './IngredientsItem';
 import PreparationHeader from './PreparationHeader';
 import StepItem from './StepItem'
 import LightSearchBar from './LightSearchBar';
+import EquipmentItem from './EquipmentItem'
 class Recipee extends Component {
     state = {
         data: [],
@@ -13,7 +14,8 @@ class Recipee extends Component {
         amountArr: [],
         perAmountArr: [],
         unitArr: [],
-        stepsArr: []
+        stepsArr: [],
+        equipment: []
     }
     componentDidMount() {
         fetch(
@@ -52,7 +54,7 @@ class Recipee extends Component {
         for (let i = 0; i < this.state.amountArr.length; i++) {
             newArr.push(this.state.IngredientData[i].unit);
         }
-        this.setState({ unitArr: newArr });
+        this.setState({ unitArr: newArr }, this.handleEquipment);
     };
     handleMinus = () => {
         if (this.state.servings > 1) {
@@ -75,6 +77,15 @@ class Recipee extends Component {
         }
         this.setState({ amountArr: newArr });
     };
+    handleEquipment = () => {
+        fetch(
+            `https://api.spoonacular.com/recipes/${this.state.data.id}/equipmentWidget.json?apiKey=f2401b7dfd314af29cd194707465a940`
+        )
+            .then((response) => response.json())
+            .then((json) => {
+                this.setState({ equipment: json.equipment });
+            });
+    }
     render() {
         return (
             <article id='recipee'>
@@ -109,6 +120,16 @@ class Recipee extends Component {
                                     }
                                 />
                             ))}
+                            <div className="Equipment">
+                                <h6 className='color'>Equipment:</h6>
+                                {this.state.equipment.map((elt, i) =>
+                                    <EquipmentItem
+                                        key={i}
+                                        name={elt.name}
+                                        image={elt.image}
+                                    />
+                                )}
+                            </div>
                         </div>
                         <div className='Preparation'>
                             <PreparationHeader

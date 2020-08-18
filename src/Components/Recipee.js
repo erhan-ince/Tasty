@@ -5,6 +5,7 @@ import IngredientsItem from './IngredientsItem';
 import PreparationHeader from './PreparationHeader';
 import StepItem from './StepItem';
 import LightSearchBar from './LightSearchBar';
+import EquipmentItem from './EquipmentItem';
 class Recipee extends Component {
      state = {
           data: [],
@@ -14,6 +15,7 @@ class Recipee extends Component {
           perAmountArr: [],
           unitArr: [],
           stepsArr: [],
+          equipment: []
      };
      componentDidMount() {
           fetch(
@@ -30,6 +32,13 @@ class Recipee extends Component {
                          },
                          this.handleIngredientAmount
                     );
+               });
+          fetch(
+               `https://api.spoonacular.com/recipes/${this.props.match.params.id}/equipmentWidget.json?apiKey=f2401b7dfd314af29cd194707465a940`
+          )
+               .then((response) => response.json())
+               .then((json) => {
+                    this.setState({ equipment: json.equipment });
                });
      }
      handleIngredientAmount = () => {
@@ -111,6 +120,16 @@ class Recipee extends Component {
                                              }
                                         />
                                    ))}
+                                   <div className="Equipment">
+                                        <h6 className='color'>Equipment:</h6>
+                                        {this.state.equipment.map((elt, i) =>
+                                             <EquipmentItem
+                                                  key={i}
+                                                  name={elt.name}
+                                                  image={elt.image}
+                                             />
+                                        )}
+                                   </div>
                               </div>
                               <div className='Preparation'>
                                    <PreparationHeader

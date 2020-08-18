@@ -313,6 +313,25 @@ select:focus{
 .noBG{
      background: none;
 }
+.Equipment{
+     border-top: 1px solid #5bb3a0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-top: 10px;
+}
+.EquipmentItem{
+     border-bottom: 1px solid #5bb3a0;
+     width: 100%;
+     display: flex;
+     align-items: center;
+}
+.EquipmentItem p{
+     margin: 20px;
+}
+.EquipmentItem img{
+     width: 50px;
+}
 @media only screen and (min-width: 768px) and (max-width: 979px) {
      .category {
           grid-template-columns: 1fr 1fr;
