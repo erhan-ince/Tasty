@@ -375,9 +375,39 @@ select:focus{
           .home{
                width: 95%;
           }
-          .category{
-               width: 95%;
+          #category{
+               width: 100%;
                grid-template-columns: 1fr;
+               padding:0 0 5vh 0;
+               margin: 0;
+          }
+          .CategoryItem{
+               width: 90%;
+               margin: auto;
+          }
+          .CategoryItem h2{
+               height: 100px;
+          }
+          .searchbar{
+               padding-bottom: 20px;
+          }
+          .CategoryImg{
+               width: 100%;
+               height: 37vh;
+               display: flex;
+               flex-direction: column;
+               flex-wrap: wrap;
+          }
+          #root{
+               width: 100%;
+          }
+          .georg{
+               width: 100%;
+               padding: 0;
+               margin: 0;
+          }
+          #category img{
+               width: 100%;
           }
           .searchbar input{
                width: 50%;
@@ -385,4 +415,11 @@ select:focus{
           ::placeholder{
                font-size: .75rem;
           }
+          #recipee{
+               width: 100%;
           }
+          .main{
+               width: 100%;
+              display: flex;
+          }
+     }
