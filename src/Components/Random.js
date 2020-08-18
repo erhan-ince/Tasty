@@ -102,7 +102,7 @@ class Recipee extends Component {
                         readyInMinutes={this.state.data.readyInMinutes}
                         servings={this.state.data.servings}
                         healthScore={this.state.data.healthScore}
-                        pricePerServing={this.state.data.pricePerServing}
+                        pricePerServing={Math.round(this.state.data.pricePerServing)}
                     />
                     <div className='bottom'>
                         <div className='Ingredients'>

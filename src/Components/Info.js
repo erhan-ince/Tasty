@@ -24,7 +24,7 @@ const Info = (props) => {
                     </div>
                     <div>
                         <h4>Price P/P</h4>
-                        <h5>{props.pricePerServing}C</h5>
+                        <h5>{props.pricePerServing} C</h5>
                     </div>
                 </div>
             </div>
