@@ -18,7 +18,7 @@ class Category extends Component {
      }
      render() {
           return (
-               <div>
+               <div className="georg">
                     <SearchBarAll />
                     <div id='category'>
                          {this.state.data.map((elt) => (
