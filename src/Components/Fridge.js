@@ -28,7 +28,7 @@ class Fridge extends Component {
         this.setState({ ingredient5: e.target.value });
     }
     handleSelect = (event) => {
-        let newUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${this.state.ingredient1},+${this.state.ingredient2},+${this.state.ingredient3}&ranking=1&apiKey=adc6b8b2a9dd4856a79419fdcec21e21`
+        let newUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${this.state.ingredient1},+${this.state.ingredient2},+${this.state.ingredient3}&ranking=1&apiKey=84fe766ead804aee905fa97fc4f9ead9`
         fetch(newUrl)
             .then(response => response.json())
             .then(json => {

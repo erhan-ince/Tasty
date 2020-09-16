@@ -19,7 +19,7 @@ class Recipee extends Component {
      };
      componentDidMount() {
           fetch(
-               `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=adc6b8b2a9dd4856a79419fdcec21e21`
+               `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=84fe766ead804aee905fa97fc4f9ead9`
           )
                .then((response) => response.json())
                .then((json) => {
@@ -34,7 +34,7 @@ class Recipee extends Component {
                     );
                });
           fetch(
-               `https://api.spoonacular.com/recipes/${this.props.match.params.id}/equipmentWidget.json?apiKey=adc6b8b2a9dd4856a79419fdcec21e21`
+               `https://api.spoonacular.com/recipes/${this.props.match.params.id}/equipmentWidget.json?apiKey=84fe766ead804aee905fa97fc4f9ead9`
           )
                .then((response) => response.json())
                .then((json) => {

@@ -19,7 +19,7 @@ class Recipee extends Component {
     }
     componentDidMount() {
         fetch(
-            `https://api.spoonacular.com/recipes/random?apiKey=adc6b8b2a9dd4856a79419fdcec21e21`
+            `https://api.spoonacular.com/recipes/random?apiKey=84fe766ead804aee905fa97fc4f9ead9`
         )
             .then((response) => response.json())
             .then((json) => {
@@ -79,7 +79,7 @@ class Recipee extends Component {
     };
     handleEquipment = () => {
         fetch(
-            `https://api.spoonacular.com/recipes/${this.state.data.id}/equipmentWidget.json?apiKey=adc6b8b2a9dd4856a79419fdcec21e21`
+            `https://api.spoonacular.com/recipes/${this.state.data.id}/equipmentWidget.json?apiKey=84fe766ead804aee905fa97fc4f9ead9`
         )
             .then((response) => response.json())
             .then((json) => {
